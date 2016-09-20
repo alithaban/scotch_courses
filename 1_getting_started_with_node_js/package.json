@@ -1,0 +1,14 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "This is for the course only",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali Tha'Ban",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.15.0"
+  }
+}
