@@ -5,7 +5,8 @@ var db = require('../util/db.js');
 var client = require('../util/twitter');
 
 exports.home = function (req, res) {
-    db.loadDatabases({}, function () {
+
+    db.loadDatabase({}, function () {
         res.render('index', {searches:db.getCollection('searches').data});
     })
 }
