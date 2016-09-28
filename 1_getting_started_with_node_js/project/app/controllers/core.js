@@ -5,7 +5,6 @@ var db = require('../util/db.js');
 var client = require('../util/twitter');
 
 exports.home = function (req, res) {
-
     db.loadDatabase({}, function () {
         res.render('index', {searches:db.getCollection('searches').data});
     })
@@ -13,7 +12,7 @@ exports.home = function (req, res) {
 
 exports.top = function (req, res) {
     db.loadDatabase({}, function () {
-        res.render('top', {terms: db.getCollection('terms').data});
+        res.render('top', {terms: db.getCollection('top').data});
     })
 }
 
