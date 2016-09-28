@@ -12,7 +12,7 @@ exports.results = function (req, res) {
         db.saveDatabase();
 
         client.get('search/tweets',{q:query},function (error, tweets, response) {
-            res.render('results', {query:query, tweets:tweets._statuses});
+            res.json({query:query, tweets:tweets.statuses});
         })
     }
     else
