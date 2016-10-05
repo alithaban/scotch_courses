@@ -33,6 +33,11 @@ app.get('/:username/:post_slug', function (req,res) {
     res.send(' Written by ' + req.params.username + ', ' + req.params.post_slug);
 })
 
+app.use(function (req, res, next) {
+    res.status(404);
+    res.sendFile(__dirname +'/404.html');
+})
+
 function authenticate(req,res, next){
     console.log('Authenticate is here');
 
