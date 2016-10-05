@@ -24,6 +24,11 @@ app.route('/contact').get(function (req, res) {
     res.send('Hello ' + req.body.name);
 })
 
+app.get('/:username/:post_slug',function (req,res) {
+    console.log(req.params);
+    res.send(' Written by ' + req.params.username + ', ' + req.params.post_slug);
+})
+
 //start the server
 app.listen(port, function () {
     console.log('Te app is running');
